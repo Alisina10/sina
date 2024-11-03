@@ -1,0 +1,806 @@
+    @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+    /* Apply Crimson Text to the entire website */
+    body, html {
+        font-family: 'Crimson Text', serif;
+    }
+
+    /* Applies to the scrollable container */
+    body {
+        scroll-snap-type:none;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    /* Each section within the scrollable area */
+    section {
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+
+    
+    /* Global Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+    
+    /* Styling for the profession text */
+    .profession {
+        color: #fffdfd;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    /* Styling for copyright */
+    .copyright {
+        color: #000000;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    /* Header */
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    /* Normal Desktop Navigation */
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+        list-style-type: none;
+        background: rgba(255, 255, 255, 0.8); 
+    }
+    
+    .nav-links li {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links a {
+        position: relative;
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        transition: color 0.4s ease;
+    }
+    
+    /* Hover effect */
+    .nav-links a:hover {
+        color: #007bff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Add animated underline */
+    .nav-links a::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #007bff;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+    
+    /* Animate the underline */
+    .nav-links a:hover::before {
+        visibility: visible;
+        width: 100%;
+    }
+    
+    /* Home Section */
+    #home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        color: rgb(250, 247, 247);
+    }
+    
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    /* Profile Container */
+    .profile-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .profile-pic {
+        border-radius: 100%;
+        width: 175px;
+        height: 175px;
+        object-fit: cover;
+        border: 5px solid white;
+    }
+    
+    /* Contact Me Button */
+    .btn {
+        padding: 10px 30px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #ff7f50;
+        color: #fff;
+    }
+    
+    /* Social Media */
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .social-media a {
+        color: hsla(211, 100%, 50%, 0.923);
+        margin: 0 15px;
+        transition: color 0.4s ease-in-out;
+    }
+    
+    .social-media a:hover {
+        color: #ff7f50;
+    }
+    
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        position: relative;
+        width: 100%;
+    }
+
+    
+
+    
+    /* Desktop Navigation */
+    .nav-links {
+        display: flex;
+        justify-content: center; /* Aligns the navigation to the right */
+        gap: 50px;
+        padding: 20px;
+        list-style-type: none;
+        background: rgba(255, 255, 255, 0.8); 
+        margin: 30px auto; /* Adjusts the margin to push it down */
+        width: 100%; /* Ensures the navigation container spans the full width */
+    }
+
+
+
+
+    /* Mobile Navigation */
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden on the right */
+        width: 90vw; /* Adjust width to make it appear like the one in your provided screenshot */
+        height: 100vh;
+        background-color: #ffffff; /* Solid white background */
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 50px 20px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    /* Ensure Mobile Menu is Right-Aligned */
+    .hamburger-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+    /* Close button styling */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    /* Mobile Nav Links */
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 50px 0 0; /* Start menu links lower down */
+    }
+
+    .mobile-nav ul li {
+        margin: 15px 0; /* Space between items */
+    }
+
+    .mobile-nav ul li a {
+        display: block;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #f7f7f7; /* Light background for buttons */
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for effect */
+        text-align: center;
+    }
+
+    /* Hover Effect for Mobile Nav Links */
+    .mobile-nav ul li a:hover {
+        background-color: #e0e0e0; /* Slightly darker on hover */
+        color: #007bff; /* Blue text on hover */
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    /* Show mobile nav when triggered */
+    .mobile-nav.show {
+        right: 0;
+    }
+
+    /* Mobile Overlay (for background dimming when menu is open) */
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    /* Show overlay when menu is open */
+    .mobile-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Hide the hamburger menu when the mobile nav is open */
+    .hamburger-menu.hide {
+        display: none;
+    }
+
+    /* Hide mobile navigation on larger screens */
+    @media (min-width: 769px) {
+        .mobile-nav {
+            display: none; /* Hide mobile menu */
+        }
+
+        .hamburger-menu {
+            display: none; /* Hide hamburger icon */
+        }
+
+        .nav-links-container {
+            display: flex; /* Show the normal navigation */
+        }
+
+        .mobile-overlay {
+            display: none; /* Hide the overlay on larger screens */
+        }
+    }
+
+    /* Show mobile navigation on smaller screens */
+    @media (max-width: 768px) {
+        .nav-links-container {
+            display: none; /* Hide normal navigation on small screens */
+        }
+
+        .hamburger-menu {
+            display: block; /* Show hamburger icon */
+        }
+    }
+
+    /* Fix for white space on the right */
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+
+    /* About section  for computer*/
+
+
+    /* Video Background */
+    .video-background {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0; /* Place video behind content */
+    }
+
+    /* About Content - Adjusted to the left */
+    .about-content {
+        position: absolute; /* Keeps it positioned over the video */
+        z-index: 1; /* Ensure it stays above the video */
+        color: white; /* Text color */
+        text-align: left; /* Align text to the left */
+        top: 15%; /* Position the content higher up */
+        left: 5%; /* Align it to the left side */
+        width: 40%; /* Adjust the width as needed */
+        padding: 20px;
+        animation: fadeInText 1.8s ease-out; /* Fade-in animation for the text */
+    }
+
+
+    /* Enhanced Animation for Text Fade-in */
+    @keyframes fadeInText {
+        0% {
+            transform: translateY(40px); /* Start slightly lower */
+            opacity: 0;
+        }
+        60% {
+            transform: translateY(10px); /* Intermediate position */
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(0); /* End at normal position */
+            opacity: 1;
+        }
+    }
+
+    /* Apply the smoother fade-in animation */
+    .about-content {
+        animation: fadeInText 2s cubic-bezier(0.42, 0, 0.58, 1); /* Smoother easing curve */
+    }
+
+    /* Span hover effect for each word */
+    .about-content p span {
+        display: inline-block; /* Ensure words behave as blocks */
+        transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth easing for hover */
+    }
+
+    /* On hover, each word will move up slightly */
+    .about-content p span:hover {
+        transform: translateY(-5px); /* Moves the hovered word up */
+        color: #ff7f50; /* Change color on hover */
+    }
+
+
+    /* Overlay Image */
+    .overlay-image {
+        width: 270px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-top: -95px;
+        display: block;
+        animation: zoomInPhoto 1.5s ease-out; /* Subtle zoom-in animation for the photo */
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    /* New Animation for Image */
+    @keyframes zoomInPhoto {
+        from {
+            transform: scale(0.8); /* Start smaller */
+            opacity: 0;
+        }
+        to {
+            transform: scale(1); /* End at normal size */
+            opacity: 1;
+        }
+    }
+
+    /* Hover effect for image: Subtle zoom-in */
+    .overlay-image:hover {
+        transform: scale(1.05); /* Slight zoom-in on hover */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+    }
+
+    /* Container for the image and hover message */
+    .image-hover-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align items to the left */
+        width: 100%;
+    }
+
+    /* Adjust the overlay image within the container */
+    .overlay-image {
+        width: 270px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        display: block;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    /* Image hover effect */
+    .overlay-image:hover {
+        transform: scale(1.05); /* Slight zoom-in on hover */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+    }
+
+    /* Message container (initially hidden and placed on the right) */
+    .hover-message {
+        opacity: 0;
+        margin-left: 30px; /* Keep it slightly to the right of the image */
+        font-size: 1.2rem;
+        color:#161616;
+        transform: translateX(50px); /* Positioned off-screen to the right */
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    /* When hovering over the image, show the message */
+    .image-hover-container:hover .hover-message {
+        opacity: 1;
+        transform: translateX(0); /* Slide into place */
+    }
+
+
+    /* Mute Button */
+    .mute-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 0.70rem;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .mute-button:hover {
+        background-color: rgba(255, 127, 80, 0.8); /* Slightly lighter on hover */
+    }
+
+    /* Adjustments for About Section Text */
+    .about-content h1, h3, h4 {
+        margin: 0 0 20px 0;
+    }
+
+    .about-content p {
+        margin: 0 0 30px 0;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+
+    @media (max-width: 768px) {
+        #bg-video {
+            display: block; /* Ensure the video is shown */
+        }
+        .video-background {
+            background: none; /* Remove the background image setting */
+        }
+        .video-background img {
+            display: none; /* Hide the fallback image */
+        }
+    }
+
+
+
+    /* Hide desktop-specific content on mobile */
+    @media (max-width: 768px) {
+        .about-content {
+            display: none; /* Hide the desktop About content on mobile */
+        }
+        
+        /* Ensure mobile-specific content is visible */
+        .mobile-about-content {
+            display: flex; /* Show mobile About content */
+        }
+    }
+
+
+
+    /* Mobile-specific adjustments for About section */
+    @media (max-width: 768px) {
+        /* Mobile About Content styling */
+        #about .mobile-about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            text-align: left;
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        /* Mobile paragraph styling with larger font */
+        #about .mobile-about-content p {
+            font-size: calc(0.8rem + 0.4vw); /* Slightly larger font size */
+            line-height: 1.6;
+            margin: 10px 0;
+            color: white; /* Default color is white */
+        }
+
+        /* Styling for each word */
+        #about .mobile-about-content p span {
+            display: inline-block;
+            font-weight: bold;
+            color: white; /* Default to white */
+            transition: color 0.4s cubic-bezier(0.42, 0, 0.58, 1); /* Smoother transition */
+        }
+
+        /* Gradient animation for active words */
+        #about .mobile-about-content p span.animate-charcter {
+            background-image: linear-gradient(
+                -225deg,
+                #333333 0%,
+                #6A0DAD 29%,
+                #FFC107 67%,
+                #FF6347 100%
+            );
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1s cubic-bezier(0.42, 0, 0.58, 1) forwards; /* Smooth easing and slightly slower */
+        }
+
+        /* Keyframes for gradient animation */
+        @keyframes textclip {
+            0% {
+                background-position: 0 center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+    }
+
+        /* Container for image and hover message */
+        #about .mobile-image-hover-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Allows it to grow within the upper part */
+        }
+
+        /* Image styling with smooth scaling */
+    #about .mobile-overlay-image {
+        width: 50vw; /* Responsive width */
+        max-width: 230px;
+        min-width: 130px;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother scaling and shadow transition */
+        margin-top: 25px;
+    }
+
+    /* Smooth touch effect for the image */
+    #about .mobile-overlay-image.touched {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    }
+
+    /* Hover message positioned below the image */
+    #about .mobile-hover-message {
+        margin-top: 10px; /* Space between image and message */
+        opacity: 0;
+        font-size: clamp(0.9rem, 1vw, 1rem); /* Responsive font size */
+        color: #ffffff;
+        font-weight: bold; /* Makes the text bold */
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother appearance */
+        white-space: nowrap;
+        transform: translateY(10px); /* Start slightly below to create a slide-up effect */
+        
+    }
+
+    /* Smooth transition on touch */
+    #about .mobile-hover-message.touched {
+        opacity: 1;
+        transform: translateY(0); /* Slide into place smoothly */
+    }
+
+    /* Text positioned towards the bottom */
+    #about .mobile-about-content {
+        text-align: left;
+        padding: 10px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        flex-grow: 1; /* Allows it to sit lower in the section */
+        overflow-y: auto; /* Ensures text is scrollable if too long */
+        color: white;
+    }
+
+    /* Mobile paragraph styling */
+    #about .mobile-about-content p {
+        font-size: calc(0.8rem + 0.4vw); /* Slightly larger font size */
+        line-height: 1.6;
+        color: white;
+    }
+
+
+
+
+    /* Full Screen Video Container */
+    #web_developer {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Full Screen Video Styling */
+    .web_developer .web-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Places video behind other elements */
+    }
+
+    /* Welcome Message Positioned at the Top */
+    .welcome-message {
+        position: absolute;
+        top: 10%; /* Positions this text 10% from the top */
+        left: 50%;
+        transform: translateX(-50%); /* Centers the text horizontally */
+        font-size: 1.5rem; /* Smaller font size */
+        color: #ff7f50;
+        font-weight: bold;
+        text-align: center;
+        padding: 0.8em 1.2em;
+        animation: fadeIn 3s ease-in-out infinite alternate;
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+
+    /* Optional Animated Border with Rotation for Welcome Message */
+    .welcome-message::before,
+    .welcome-message::after {
+        content: '';
+        position: absolute;
+        top: 50%; /* Centers the border around the text */
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #ff7f50;
+        transform: translate(-50%, -50%) rotate(0deg);
+        animation: rotateBorder 10s infinite linear;
+    }
+
+    .welcome-message::before {
+        border-color: #ffffff transparent transparent transparent;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .welcome-message::after {
+        border-color: transparent transparent #ffffff transparent;
+        width: 105%;
+        height: 105%;
+        z-index: -1;
+    }
+
+    /* Rotation Animation */
+    @keyframes rotateBorder {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    /* Fade-in Animation for Welcome Message */
+    @keyframes fadeIn {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.7;
+        }
+    }
+
+    /* Content Container for Text Animation */
+    .content {
+        position: absolute;
+        top: 90%; /* Positions the text towards the bottom */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+        z-index: 1; /* Ensures text is on top of the video */
+    }
+
+    /* Styled Text */
+    .content h2 {
+        font-size: 1,75rem; /* Smaller font size */
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* Outline Text */
+    .content h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 1px #ff7f50;
+    }
+
+    /* Filled Animated Text */
+    .content h2:nth-child(2) {
+        color: #ff7f50;
+        animation: smoothAnimate 5s ease-in-out infinite, fade 5s ease-in-out infinite;
+    }
+
+    /* Smoother Clip-path Animation */
+    @keyframes smoothAnimate {
+        0%, 100% {
+            clip-path: polygon(0% 46%, 15% 47%, 32% 49%, 55% 60%, 70% 62%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
+        }
+        50% {
+            clip-path: polygon(0% 58%, 15% 63%, 35% 64%, 50% 61%, 65% 52%, 83% 47%, 100% 49%, 100% 100%, 0% 100%);
+        }
+    }
+
+    /* Fade In and Out for Smoothness */
+    @keyframes fade {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.7;
+        }
+    }
+
+
+

@@ -1,0 +1,221 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ali Sina Jawid - Full Stack Developer & Content Creator</title>
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Ali Sina Jawid's personal website showcasing his work as a Full Stack Developer and content creator.">
+        <meta name="keywords" content="Ali Sina Jawid, Full Stack Developer, content creator, software engineering, portfolio, web development">
+
+        <!-- Social Media Meta Tags -->
+        <meta property="og:title" content="Ali Sina Jawid - Full Stack Developer & Content Creator">
+        <meta property="og:description" content="Explore Ali Sina Jawid's work in Full Stack development and content creation.">
+        <meta property="og:image" content="path_to_your_image.jpg">
+        <meta property="og:url" content="https://alisinagraphy.com">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="sina.css" media="all">
+
+        <!-- JavaScript (Deferred) -->
+        <script src="sina.js" defer></script>
+    </head>
+    <body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Hamburger Menu Button for Mobile -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Hamburger Icon (Font Awesome) -->
+        </div>
+
+        <!-- Mobile Overlay for background dimming effect -->
+        <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+        <!-- Normal Navigation (visible on larger screens) -->
+        <nav aria-label="Main Navigation" class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#web_developer">Full Stack Developer</a></li>
+                <li><a href="#drone">Drone Videos & Photos</a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#free-luts">Free LUTs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav class="mobile-nav" id="mobileNav">
+            <!-- Close Button (X) inside mobile navigation -->
+            <div class="close-btn" onclick="toggleMenu()">
+                <i class="fas fa-times"></i> <!-- Font Awesome "X" icon -->
+            </div>
+
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#web_developer" onclick="toggleMenu()">Full Stack Developer</a></li>
+                <li><a href="#drone" onclick="toggleMenu()">Drone Videos & Photos</a></li>
+                <li><a href="#photography" onclick="toggleMenu()">Photography</a></li>
+                <li><a href="#free-luts" onclick="toggleMenu()">Free LUTs</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-container">
+                <img src="background.jpg" alt="Background Image" class="background-img">
+                <div class="profile-container">
+                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <h1>Ali Sina Jawid</h1>
+                    <p class="profession">
+                        <span id="typed"></span> <!-- This span will be used for the typing effect -->
+                    </p>
+                    <a href="mailto:jawidali2021@gmail.com" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        
+                                        
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="video-background">
+            <video id="bg-video" autoplay loop playsinline>
+                <source src="about.mp4" type="video/mp4">
+                <img src="fall.jpg" alt="Fallback Image">
+                Your browser does not support the video tag.
+            </video>
+            <button class="mute-button" onclick="toggleMute()">Mute</button>
+            
+            <!-- Desktop About Content -->
+            <div class="about-content">
+                <div class="image-hover-container">
+                    <img src="about.jpg" alt="Your Image" class="overlay-image">
+                    <span class="hover-message">Thanks for visiting, let me know your thoughts!</span>
+                </div>
+                <p>
+                    <p>
+                        <span>I'm</span> <span>Ali</span> <span>Sina</span> <span>Jawid,</span> <span>a</span> <span>Software</span> <span>Engineering</span> <span>sophomore</span> <span>at</span> <span>the</span> <span>American</span> <span>University</span> <span>of</span> <span>Central</span> <span>Asia,</span> <span>specializing</span> <span>in</span> <span>full</span> <span>stack</span> <span>development.</span>
+                        <span>I</span> <span>seamlessly</span> <span>integrate</span> <span>front-end</span> <span>and</span> <span>back-end</span> <span>technologies</span> <span>to</span> <span>deliver</span> <span>comprehensive</span> <span>web</span> <span>solutions.</span>
+                        <span>Beyond</span> <span>coding,</span> <span>I</span> <span>am</span> <span>a</span> <span>drone</span> <span>pilot</span> <span>and</span> <span>photographer,</span> <span>capturing</span> <span>the</span> <span>diverse</span> <span>landscapes</span> <span>of</span> <span>Kyrgyzstan.</span>
+                        <span>Through</span> <span>my</span> <span>videography</span> <span>and</span> <span>photography,</span> <span>I</span> <span>bring</span> <span>the</span> <span>stunning</span> <span>vistas</span> <span>and</span> <span>vibrant</span> <span>culture</span> <span>of</span> <span>the</span> <span>region</span> <span>to</span> <span>life,</span> <span>weaving</span> <span>visual</span> <span>narratives</span> <span>that</span> <span>resonate</span> <span>deeply.</span>
+                        <span>My</span> <span>background</span> <span>in</span> <span>leadership</span> <span>and</span> <span>social</span> <span>activism</span> <span>across</span> <span>Central</span> <span>Asia</span> <span>informs</span> <span>my</span> <span>approach,</span> <span>allowing</span> <span>me</span> <span>to</span> <span>blend</span> <span>technical</span> <span>expertise</span> <span>with</span> <span>creative</span> <span>storytelling</span> <span>in</span> <span>all</span> <span>my</span> <span>projects.</span>
+                        <span>Dream</span> <span>big</span> <span>and</span> <span>you</span> <span>will</span> <span>achieve</span> <span>more</span> <span>than</span> <span>you</span> <span>ever</span> <span>hoped.</span> <span>Sina</span>
+                    </p>
+                    <p>
+                        <span>#Front-End</span> <span>#Back-End</span> <span>#JavaScript</span> <span>#Python</span> <span>#FinalCutPro</span> <span>#PremierePro</span> <span>#Lightroom</span> <span>#Nature</span> <span>#Adventure</span> <span>#Hiking</span>
+                    </p>
+                </p>
+                <h5>@alisinagraphy</h5>
+            </div>
+
+            <!-- About Section for Mobile -->
+            <div class="mobile-about-content">
+                <div class="mobile-image-hover-container">
+                    <img src="about.jpg" alt="Your Image" class="mobile-overlay-image">
+                    <span class="mobile-hover-message">Thanks for visiting, let me know your thoughts!</span>
+                </div>
+                <p>
+                    <p>
+                        <span>I'm</span> <span>Ali</span> <span>Sina</span> <span>Jawid,</span> <span>a</span> <span>Software</span> <span>Engineering</span> <span>sophomore</span> <span>at</span> <span>the</span> <span>American</span> <span>University</span> <span>of</span> <span>Central</span> <span>Asia,</span> <span>specializing</span> <span>in</span> <span>full</span> <span>stack</span> <span>development.</span>
+                        <span>I</span> <span>seamlessly</span> <span>integrate</span> <span>front-end</span> <span>and</span> <span>back-end</span> <span>technologies</span> <span>to</span> <span>deliver</span> <span>comprehensive</span> <span>web</span> <span>solutions.</span>
+                        <span>Beyond</span> <span>coding,</span> <span>I</span> <span>am</span> <span>a</span> <span>drone</span> <span>pilot</span> <span>and</span> <span>photographer,</span> <span>capturing</span> <span>the</span> <span>diverse</span> <span>landscapes</span> <span>of</span> <span>Kyrgyzstan.</span>
+                        <span>Through</span> <span>my</span> <span>videography</span> <span>and</span> <span>photography,</span> <span>I</span> <span>bring</span> <span>the</span> <span>stunning</span> <span>vistas</span> <span>and</span> <span>vibrant</span> <span>culture</span> <span>of</span> <span>the</span> <span>region</span> <span>to</span> <span>life,</span> <span>weaving</span> <span>visual</span> <span>narratives</span> <span>that</span> <span>resonate</span> <span>deeply.</span>
+                        <span>My</span> <span>background</span> <span>in</span> <span>leadership</span> <span>and</span> <span>social</span> <span>activism</span> <span>across</span> <span>Central</span> <span>Asia</span> <span>informs</span> <span>my</span> <span>approach,</span> <span>allowing</span> <span>me</span> <span>to</span> <span>blend</span> <span>technical</span> <span>expertise</span> <span>with</span> <span>creative</span> <span>storytelling</span> <span>in</span> <span>all</span> <span>my</span> <span>projects.</span>
+                        <span>Dream</span> <span>big</span> <span>and</span> <span>you</span> <span>will</span> <span>achieve</span> <span>more</span> <span>than</span> <span>you</span> <span>ever</span> <span>hoped.</span> <span>Sina</span>
+                    </p>
+                    <p>
+                        <span>#Front-End</span> <span>#Back-End</span> <span>#JavaScript</span> <span>#Python</span> <span>#FinalCutPro</span> <span>#PremierePro</span> <span>#Lightroom</span> <span>#Nature</span> <span>#Adventure</span> <span>#Hiking</span>
+                    </p>
+                </p>
+                <h5>@alisinagraphy</h5>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Full Stack Developer Section -->
+    <section id="web_developer">
+        <div class="web_developer">
+            <video src="web.mp4" autoplay loop muted playsinline class="web-video"></video>
+
+            <!-- Separate Welcome Message Container -->
+            <div class="welcome-container">
+                <h2 class="welcome-message">I am happy you are here, continue</h2>
+            </div>
+
+            <div class="content">
+                <h2>Coming Soon...</h2>
+                <h2>Coming Soon...</h2>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- Drone Videos and Photos Section -->
+        <section id="drone">
+            <div class="drone-container">
+                <h1>Drone Videos and Photos</h1>
+                <p>Check out some amazing drone footage and photos captured from around the world.</p>
+            </div>
+        </section>
+
+        <!-- Photography Section -->
+        <section id="photography">
+            <div class="photography-container">
+                <h1>Photography</h1>
+                <p>I love capturing the beauty of nature and cityscapes through photography.</p>
+            </div>
+        </section>
+
+        <!-- Free LUTs Section -->
+        <section id="free-luts">
+            <div class="luts-container">
+                <h1>Free LUTs</h1>
+                <p>Explore and download my custom LUTs to enhance your videos and photos with unique color grading styles.</p>
+                <a href="link_to_your_luts.zip" class="btn">Download LUTs</a> <!-- Replace with actual download link -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <h1>Contact Me</h1>
+                <p>Feel free to reach out via email at <a href="mailto:jawidali2021@gmail.com">jawidali2021@gmail.com</a>.</p>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/ali-sina-jawid" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/alisinagraphy" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.youtube.com/@alisinagraphy" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                <a href="mailto:jawidali2021@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Ali Sina Jawid. All rights reserved.</p>
+        </footer>
+        
+
+    </body>
+    </html>
